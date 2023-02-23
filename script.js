@@ -21,7 +21,7 @@ function makeRows(rows, cols) {
   };
 };
 
-makeRows(16, 16);
+makeRows(50, 50);
 
 
 
