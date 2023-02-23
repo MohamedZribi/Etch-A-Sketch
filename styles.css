@@ -1,13 +1,12 @@
-
 body {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background-color: rgb(118, 200, 228);
-    /* padding-left: 100px;
-    padding-right: 100px; */
-    gap: 50px;
+    gap: 10px; 
+    min-height: 100vh
 }
 
 
@@ -18,15 +17,14 @@ body {
     align-items: center;
     justify-content: center;
     color: black;
+    gap: 7px;
 }
 
 .main-header {
-    margin-top: 50px;
     margin-bottom: 1px;
 }
 
 .second-header {
-    margin-bottom: 50px;
     margin-top: 0px;
 
 }
@@ -42,8 +40,8 @@ display: grid;
 /* grid-gap: 1em; */
 grid-template-rows: repeat(var(--grid-rows), 1fr);
 grid-template-columns: repeat(var(--grid-cols), 1fr);
-height: 500px;
-width: 500px;
+height: 600px;
+width: 600px;
 border: solid 2px;
 background-color: white;
 
@@ -58,9 +56,24 @@ box-sizing: border-box;
 
 
 #eraze, #resize {
-    padding: 5px;
+    padding: 10px;
     height: auto;
-    width: 120px;
+    width: 150px;
     font-weight: bold;
+    font-size: 16px;
 
+}
+
+.github-profile{
+    height: 30px;
+    width: 30px;
+}
+
+footer{
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
 }

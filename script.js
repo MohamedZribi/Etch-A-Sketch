@@ -58,8 +58,11 @@ resize.addEventListener('click', () => {
 
 
 
-
-
+// Add dynamic year change to footer
+window.onload = function(){
+  let year = new Date().getFullYear()      
+  document.getElementById('footer').innerHTML = `Copyright © ${year}`;
+};
 
 
 
