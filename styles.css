@@ -4,9 +4,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: grey;
-    padding-left: 100px;
-    padding-right: 100px;
+    background-color: rgb(118, 200, 228);
+    /* padding-left: 100px;
+    padding-right: 100px; */
+    gap: 50px;
 }
 
 
@@ -16,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: aliceblue;
+    color: black;
 }
 
 .main-header {
@@ -30,14 +31,34 @@ body {
 
 }
 
-
 /* Styling the grid */
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+  }
+  
 #grid {
+display: grid;
+/* grid-gap: 1em; */
+grid-template-rows: repeat(var(--grid-rows), 1fr);
+grid-template-columns: repeat(var(--grid-cols), 1fr);
+height: 500px;
+width: 500px;
+}
 
-    display: grid;
-    grid-gap: 1px;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
-    height: 650px;
-    width: 650px;
+#grid-item {
+/* padding: 1em; */
+border: 1px solid #ddd;
+text-align: center;
+box-sizing: border-box;
+
+}
+
+
+#eraze, #resize {
+    padding: 5px;
+    height: auto;
+    width: 120px;
+    font-weight: bold;
+
 }
