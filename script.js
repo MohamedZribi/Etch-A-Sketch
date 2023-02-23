@@ -13,36 +13,52 @@ function makeRows(rows, cols) {
       cell.setAttribute('style', 'background-color: yellow')
     });
   };
+
 };
 
 
 
 
+// default grid on window load
+makeRows(16, 16);
 
-window.onload = makeRows(16, 16);
+// Eraze function 
+function erazeGrid() {
+  const gridItems = document.querySelectorAll('[id=grid-item]');
+  const eraze = document.getElementById('eraze');
+  eraze.addEventListener('click', () => {
+    gridItems.forEach(function(item) {
+      item.setAttribute('style', 'background-color: none');    
+    });
+  
+  });
+};
+
+erazeGrid()
 
 
 // resize the grid
 const resize = document.getElementById('resize')
 resize.addEventListener('click', () => {
-  let cellCount = prompt("Enter the cell count you want: ");
   container.innerHTML = ""
+  let cellCount = prompt("Enter the cell count you want beteen 1 and 100: ");
+  if((cellCount === null) || (cellCount > 100) || (cellCount < 1) ) {
+    alert("The cell count should be between 1 and 100")
+    cellCount = 16;
+  };
   makeRows(Number(cellCount), Number(cellCount));
+  erazeGrid()
 
 });
 
 
 
 
-// console.log(gridItem)
-const gridItem = document.querySelectorAll('#grid-item');
-const eraze = document.getElementById('eraze');
 
-eraze.addEventListener('click', () => {
-  Array.from(gridItem).forEach(item => {
-    item.setAttribute('style', 'background-color: none')
-  });
-});
+
+
+
+
 
 
 
