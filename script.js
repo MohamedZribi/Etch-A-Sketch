@@ -1,3 +1,8 @@
+// Return random color
+function returnRandomColor(){
+  let colors = ["blue", "red", "white", "green", "yellow", "purple", "orange"]
+  return randomColor = colors[Math.floor(Math.random()*colors.length)];
+};
 
 // Create the grid
 const container = document.getElementById("grid");
@@ -10,17 +15,17 @@ function makeRows(rows, cols) {
 
     // ADD permanent hover effect
     cell.addEventListener('mousemove', () => {
-      cell.setAttribute('style', 'background-color: yellow')
+    cell.setAttribute('style', `background-color: ${returnRandomColor()};`)
+
     });
   };
-
 };
-
 
 
 
 // default grid on window load
 makeRows(16, 16);
+
 
 // Eraze function 
 function erazeGrid() {

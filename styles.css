@@ -45,6 +45,7 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
 height: 500px;
 width: 500px;
 border: solid 2px;
+background-color: white;
 
 }
 
