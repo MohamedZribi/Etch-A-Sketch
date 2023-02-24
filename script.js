@@ -1,6 +1,6 @@
 // Return random color
 function returnRandomColor(){
-  let colors = ["blue", "red", "white", "green", "yellow", "purple", "orange"]
+  let colors = ["blue", "red", "green", "yellow", "purple", "orange"]
   return randomColor = colors[Math.floor(Math.random()*colors.length)];
 };
 
